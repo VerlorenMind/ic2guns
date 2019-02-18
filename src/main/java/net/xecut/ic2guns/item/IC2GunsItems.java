@@ -13,19 +13,27 @@ import net.xecut.ic2guns.Reference;
 public class IC2GunsItems {
 
     public static Item smallGunpowder;
+    public static Item cartridgeEmpty;
+    public static Item cartridge;
 
     public static void preInit () {
         smallGunpowder = new ItemSmallGunpowder();
+        cartridgeEmpty = new ItemCartridgeEmpty();
+        cartridge = new ItemCartridge();
     }
 
     @SubscribeEvent
     public static void registerItems (RegistryEvent.Register<Item> event) {
-        event.getRegistry().registerAll(smallGunpowder);
+        event.getRegistry().registerAll(smallGunpowder,
+                                        cartridgeEmpty,
+                                        cartridge);
     }
 
     @SubscribeEvent
     public static void registerRenders (ModelRegistryEvent event) {
         registerRender(smallGunpowder);
+        registerRender(cartridgeEmpty);
+        registerRender(cartridge);
     }
 
     private static void registerRender (Item item) {
