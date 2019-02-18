@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.xecut.ic2guns.item.IC2GunsItems;
+import net.xecut.ic2guns.item.IC2GunsItemsRegister;
 import net.xecut.ic2guns.proxy.ServerProxy;
 import net.xecut.ic2guns.tab.CreativeTab;
 import org.apache.logging.log4j.Logger;
@@ -33,7 +33,7 @@ public class IC2GunsMod {
         logger = event.getModLog();
         creativeTab = new CreativeTab(CreativeTabs.getNextID(), "ic2guns");
         proxy.preInit(event);
-        IC2GunsItems.preInit();
+        IC2GunsItemsRegister.preInit();
     }
 
     @EventHandler
