@@ -1,2 +1,8 @@
 # IC2 Guns addon language file
 # Copyright 2019 trexxet
+
+# Creative tab
+itemGroup.ic2guns=IC2 Guns
+
+# Items
+item.small_gunpowder.name=Tiny Pile of Gunpowder

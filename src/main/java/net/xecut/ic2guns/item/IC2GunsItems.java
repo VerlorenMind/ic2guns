@@ -12,15 +12,21 @@ import net.xecut.ic2guns.Reference;
 @Mod.EventBusSubscriber (modid = Reference.MODID)
 public class IC2GunsItems {
 
-    public static void preInit () {}
+    public static Item smallGunpowder;
 
-    @SubscribeEvent
-    public static void registerItems (RegistryEvent.Register<Item> event) {
-        event.getRegistry().registerAll();
+    public static void preInit () {
+        smallGunpowder = new ItemSmallGunpowder();
     }
 
     @SubscribeEvent
-    public static void registerRenders (ModelRegistryEvent event) {}
+    public static void registerItems (RegistryEvent.Register<Item> event) {
+        event.getRegistry().registerAll(smallGunpowder);
+    }
+
+    @SubscribeEvent
+    public static void registerRenders (ModelRegistryEvent event) {
+        registerRender(smallGunpowder);
+    }
 
     private static void registerRender (Item item) {
         ModelLoader.setCustomModelResourceLocation(item, 0,

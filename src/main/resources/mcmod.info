@@ -8,9 +8,9 @@
   "url": "http://xecut.net",
   "updateUrl": "",
   "authorList": ["trexxet"],
-  "credits": "Created by trexxet",
+  "credits": "All IC2 creators",
   "logoFile": "",
   "screenshots": [],
-  "dependencies": []
+  "dependencies": ["ic2"]
 }
 ]

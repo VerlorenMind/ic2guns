@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ggg",
+    "ggg",
+    "ggg"
+  ],
+  "key": {
+    "g": {
+      "item": "ic2guns:small_gunpowder"
+    }
+  },
+  "result": {
+    "item": "minecraft:gunpowder"
+  }
+}
