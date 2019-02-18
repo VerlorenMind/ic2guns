@@ -7,36 +7,57 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.oredict.OreDictionary;
 import net.xecut.ic2guns.Reference;
 
 @Mod.EventBusSubscriber (modid = Reference.MODID)
 public class IC2GunsItems {
 
-    public static Item smallGunpowder;
-    public static Item cartridgeEmpty;
-    public static Item cartridge;
+    // Store items classes and instances
+    public enum Items {
+        SMALL_GUNPOWDER (ItemSmallGunpowder.class),
+        CARTRIDGE_EMPTY (ItemCartridgeEmpty.class),
+        CARTRIDGE (ItemCartridge.class),
+        NUGGET_LEAD (ItemNuggetLead.class);
+
+        public Class cl;
+        public IC2GunsItemBasic instance;
+
+        Items (Class cl) {
+            this.cl = cl;
+        }
+
+        public void registerOreDictionary (String name) {
+            OreDictionary.registerOre(name, instance);
+        }
+    }
 
     public static void preInit () {
-        smallGunpowder = new ItemSmallGunpowder();
-        cartridgeEmpty = new ItemCartridgeEmpty();
-        cartridge = new ItemCartridge();
+        // Create instances
+        for (Items item: Items.values()) {
+            try {
+                item.instance = (IC2GunsItemBasic) item.cl.newInstance();
+            } catch (IllegalAccessException | InstantiationException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     @SubscribeEvent
     public static void registerItems (RegistryEvent.Register<Item> event) {
-        event.getRegistry().registerAll(smallGunpowder,
-                                        cartridgeEmpty,
-                                        cartridge);
+        for (Items item: Items.values())
+            event.getRegistry().register(item.instance);
+
+        Items.NUGGET_LEAD.registerOreDictionary ("nuggetLead");
     }
 
     @SubscribeEvent
     public static void registerRenders (ModelRegistryEvent event) {
-        registerRender(smallGunpowder);
-        registerRender(cartridgeEmpty);
-        registerRender(cartridge);
+        for (Items item: Items.values())
+            registerRender(item.instance);
     }
 
-    private static void registerRender (Item item) {
+    private static void registerRender (IC2GunsItemBasic item) {
         ModelLoader.setCustomModelResourceLocation(item, 0,
                 new ModelResourceLocation(item.getRegistryName(), "inventory"));
     }
