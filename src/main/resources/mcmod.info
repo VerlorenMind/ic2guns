@@ -2,7 +2,7 @@
 {
   "modid": "ic2guns",
   "name": "IC2 Guns Addon",
-  "description": "An IC2 addon for firearms",
+  "description": "An IndustrialCraft2 addon for firearms",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "http://xecut.net",
