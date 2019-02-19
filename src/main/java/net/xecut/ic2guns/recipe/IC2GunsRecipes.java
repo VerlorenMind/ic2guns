@@ -14,17 +14,23 @@ public class IC2GunsRecipes {
         IRecipeInputFactory input = Recipes.inputFactory;
         IC2GunsItemBasic cartridgeEmpty = IC2GunsItems.CARTRIDGE_EMPTY.instance;
         IC2GunsItemBasic cartridge = IC2GunsItems.CARTRIDGE.instance;
+        IC2GunsItemBasic magazine = IC2GunsItems.MAGAZINE.instance;
 
-        addExtrudingRecipe(input.forOreDict("plateCopper"),
-                new ItemStack(cartridgeEmpty, 4));
+        /* EMPTY CARTRIDGE */
         addExtrudingRecipe(input.forStack(IC2Items.getItem("casing", "copper")),
                 new ItemStack(cartridgeEmpty, 2));
 
 
+        /* DUST FROM CARTRIDGE */
         addMaceratorRecipe(input.forStack(new ItemStack(cartridgeEmpty, 4)),
                 IC2Items.getItem("dust", "copper"));
         addMaceratorRecipe(input.forStack(new ItemStack(cartridge, 4)),
                 IC2Items.getItem("dust", "copper"));
+
+        /* MAGAZINE */
+        addExtrudingRecipe(input.forStack(IC2Items.getItem("casing", "steel")),
+                new ItemStack(magazine, 1));
+
     }
 
     private static void addExtrudingRecipe (IRecipeInput in, ItemStack out) {

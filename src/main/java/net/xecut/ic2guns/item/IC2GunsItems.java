@@ -6,9 +6,10 @@ public enum IC2GunsItems {
 
     /*****************************************/
     SMALL_GUNPOWDER(ItemSmallGunpowder.class, "tinyDustGunpowder"),
+    NUGGET_LEAD(ItemNuggetLead.class, "nuggetLead"),
     CARTRIDGE_EMPTY(ItemCartridgeEmpty.class),
     CARTRIDGE(ItemCartridge.class),
-    NUGGET_LEAD(ItemNuggetLead.class, "nuggetLead");
+    MAGAZINE(ItemMagazine.class);
     /*****************************************/
 
     public Class cl;
