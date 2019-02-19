@@ -5,7 +5,7 @@ import net.minecraftforge.oredict.OreDictionary;
 public enum IC2GunsItems {
 
     /*****************************************/
-    SMALL_GUNPOWDER(ItemSmallGunpowder.class),
+    SMALL_GUNPOWDER(ItemSmallGunpowder.class, "tinyDustGunpowder"),
     CARTRIDGE_EMPTY(ItemCartridgeEmpty.class),
     CARTRIDGE(ItemCartridge.class),
     NUGGET_LEAD(ItemNuggetLead.class, "nuggetLead");

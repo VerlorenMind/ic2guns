@@ -1,0 +1,22 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "lgc"
+  ],
+  "key": {
+    "l": {
+      "type": "forge:ore_dict",
+      "ore": "nuggetLead"
+    },
+    "g": {
+      "type": "forge:ore_dict",
+      "ore": "tinyDustGunpowder"
+    },
+    "c": {
+      "item": "ic2guns:cartridge_empty"
+    }
+  },
+  "result": {
+    "item": "ic2guns:cartridge"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "lll",
+    "lll",
+    "lll"
+  ],
+  "key": {
+    "l": {
+      "type": "forge:ore_dict",
+      "ore": "nuggetLead"
+    }
+  },
+  "result": {
+    "item": "ic2:ingot",
+    "data": 3
+  }
+}

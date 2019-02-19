@@ -1,0 +1,11 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [{
+    "type": "forge:ore_dict",
+    "ore": "ingotLead"
+  }],
+  "result": {
+    "item": "ic2guns:lead_nugget",
+    "count": 9
+  }
+}

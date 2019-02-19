@@ -9,6 +9,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.xecut.ic2guns.item.IC2GunsItemsRegister;
 import net.xecut.ic2guns.proxy.ServerProxy;
+import net.xecut.ic2guns.recipe.IC2GunsRecipes;
 import net.xecut.ic2guns.tab.CreativeTab;
 import org.apache.logging.log4j.Logger;
 
@@ -17,7 +18,7 @@ import org.apache.logging.log4j.Logger;
       useMetadata = true)
 public class IC2GunsMod {
 
-    private static Logger logger;
+    public static Logger logger;
 
     @SidedProxy (clientSide = "net.xecut.ic2guns.proxy.ClientProxy",
                  serverSide = "net.xecut.ic2guns.proxy.ServerProxy")
@@ -39,6 +40,7 @@ public class IC2GunsMod {
     @EventHandler
     public void init (FMLInitializationEvent event) {
         proxy.init(event);
+        IC2GunsRecipes.init();
     }
 
     @EventHandler

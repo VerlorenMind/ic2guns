@@ -1,0 +1,17 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "ggg",
+    "ggg",
+    "ggg"
+  ],
+  "key": {
+    "g": {
+      "type": "forge:ore_dict",
+      "ore": "tinyDustGunpowder"
+    }
+  },
+  "result": {
+    "item": "minecraft:gunpowder"
+  }
+}
