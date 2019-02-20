@@ -1,0 +1,11 @@
+{
+  "type": "ic2guns:magazine_empty",
+  "ingredients": [
+    {
+      "item": "ic2guns:magazine"
+    }
+  ],
+  "result": {
+    "item": "ic2guns:cartridge"
+  }
+}

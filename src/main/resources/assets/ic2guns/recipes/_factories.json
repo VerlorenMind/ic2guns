@@ -1,0 +1,6 @@
+{
+  "recipes": {
+    "magazine_fill": "net.xecut.ic2guns.recipe.ShapelessMagazineFillRecipe$Factory",
+    "magazine_empty": "net.xecut.ic2guns.recipe.ShapelessMagazineEmptyRecipe$Factory"
+  }
+}
