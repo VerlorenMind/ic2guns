@@ -9,7 +9,13 @@ public enum IC2GunsItems {
     NUGGET_LEAD(ItemNuggetLead.class, "nuggetLead"),
     CARTRIDGE_EMPTY(ItemCartridgeEmpty.class),
     CARTRIDGE(ItemCartridge.class),
-    MAGAZINE(ItemMagazine.class);
+    MAGAZINE(ItemMagazine.class),
+    BARREL(ItemBarrel.class),
+    BUTTSTOCK(ItemButtstock.class),
+    HANDGUARD(ItemHandguard.class),
+    LOWER_RECEIVER(ItemLowerReceiver.class),
+    UPPER_RECEIVER(ItemUpperReceiver.class),
+    RIFLE(ItemRifle.class);
     /*****************************************/
 
     public Class cl;

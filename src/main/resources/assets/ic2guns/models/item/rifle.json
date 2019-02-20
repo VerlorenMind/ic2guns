@@ -1,0 +1,23 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "ic2guns:items/rifle"
+  },
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [5, 276, 0],
+      "translation": [-0.87, 2.95, 0.38],
+      "scale": [1.0, 1.0, 0.88]
+    },
+    "thirdperson_righthand": {
+      "rotation": [79, 278, 0],
+      "translation": [-0.75, 5.00, 2.50],
+      "scale": [1.0, 1.0, 1.0]
+    },
+    "gui": {
+      "rotation": [0, 0, 322],
+      "translation": [0, 0, 0],
+      "scale": [1.14, 1.14, 1.0]
+    }
+  }
+}
