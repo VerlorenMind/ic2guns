@@ -32,9 +32,7 @@ public class ShapelessMagazineFillRecipe extends ShapelessRecipes {
         if (ammo >= ItemMagazine.MAX_AMMO)
             return ItemStack.EMPTY;
 
-        ItemStack result = super.getCraftingResult(inv);
-        ItemMagazine.setAmmo(result, ammo + 1);
-        return result;
+        return ItemMagazine.makeMagazine(1, ammo + 1);
     }
 
     public static class Factory implements IRecipeFactory {

@@ -16,9 +16,6 @@ public class IC2GunsRecipes {
         IRecipeInputFactory input = Recipes.inputFactory;
         IC2GunsItemBasic cartridgeEmpty = IC2GunsItems.CARTRIDGE_EMPTY.instance;
         IC2GunsItemBasic cartridge = IC2GunsItems.CARTRIDGE.instance;
-        IC2GunsItemBasic magazine = IC2GunsItems.MAGAZINE.instance;
-        NBTTagCompound emptyMagazineNBT = ItemMagazine.getNBTForAmmo(0);
-        NBTTagCompound fullMagazineNBT = ItemMagazine.getNBTForAmmo(ItemMagazine.MAX_AMMO);
 
         /* EMPTY CARTRIDGE */
         addExtrudingRecipe(input.forStack(IC2Items.getItem("casing", "copper")),
@@ -33,13 +30,13 @@ public class IC2GunsRecipes {
 
         /* MAGAZINE */
         addExtrudingRecipe(input.forStack(IC2Items.getItem("casing", "steel")),
-                new ItemStack(magazine, 1));
+                ItemMagazine.makeMagazine(1, 0));
 
         /* FILL MAGAZINE */
         // Seems to be broken, produces magazine with 0 ammo
-        addCanningRecipe(input.forExactStack(new ItemStack(magazine, 1, 0, emptyMagazineNBT)),
+        addCanningRecipe(input.forStack(ItemMagazine.makeMagazine(1, 0)),
                 input.forStack(new ItemStack(cartridge, 20)),
-                new ItemStack(magazine, 1, 0, fullMagazineNBT));
+                ItemMagazine.makeMagazine(1, ItemMagazine.MAX_AMMO));
 
     }
 

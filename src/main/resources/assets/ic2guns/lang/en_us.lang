@@ -10,3 +10,4 @@ item.cartridge_empty.name=Empty Cartridge
 item.cartridge.name=Cartridge
 item.lead_nugget.name=Lead Nugget
 item.magazine.name=Magazine
+item.magazine.name.empty=Empty Magazine

@@ -1,5 +1,6 @@
 package net.xecut.ic2guns.item;
 
+import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -30,6 +31,12 @@ public class ItemMagazine extends IC2GunsItemBasic {
         return 1.0 - getAmmo(stack) / (double) MAX_AMMO;
     }
 
+    @Override
+    public String getItemStackDisplayName (ItemStack stack) {
+        return getAmmo(stack) == 0 ? I18n.format("item.magazine.name.empty") :
+                super.getItemStackDisplayName(stack);
+    }
+
     public ItemMagazine () {
         super("magazine");
         setMaxStackSize(16);
@@ -51,10 +58,10 @@ public class ItemMagazine extends IC2GunsItemBasic {
         stack.setTagCompound(nbt);
     }
 
-    public static NBTTagCompound getNBTForAmmo (int value) {
-        NBTTagCompound nbt = new NBTTagCompound();
-        nbt.setInteger(AMMO_KEY, value);
-        return nbt;
+    public static ItemStack makeMagazine (int amount, int ammo) {
+        ItemStack magazine = new ItemStack(IC2GunsItems.MAGAZINE.instance, amount);
+        setAmmo(magazine, ammo);
+        return magazine;
     }
 
 }

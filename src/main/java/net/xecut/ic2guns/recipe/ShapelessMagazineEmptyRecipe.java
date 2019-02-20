@@ -11,7 +11,6 @@ import net.minecraft.util.NonNullList;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.common.crafting.IRecipeFactory;
 import net.minecraftforge.common.crafting.JsonContext;
-import net.xecut.ic2guns.item.IC2GunsItems;
 import net.xecut.ic2guns.item.ItemMagazine;
 
 public class ShapelessMagazineEmptyRecipe extends ShapelessRecipes {
@@ -47,8 +46,7 @@ public class ShapelessMagazineEmptyRecipe extends ShapelessRecipes {
         }
 
         NonNullList<ItemStack> remaining = NonNullList.withSize(inv.getSizeInventory(), ItemStack.EMPTY);
-        remaining.set(pos, new ItemStack(IC2GunsItems.MAGAZINE.instance));
-        ItemMagazine.setAmmo(remaining.get(pos), 0);
+        remaining.set(pos, ItemMagazine.makeMagazine(1, 0));
         return remaining;
     }
 
