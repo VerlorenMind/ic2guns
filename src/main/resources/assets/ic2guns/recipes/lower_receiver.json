@@ -1,0 +1,27 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "sss",
+    "pls",
+    "  c"
+  ],
+  "key": {
+    "s": {
+      "type": "forge:ore_dict",
+      "ore": "plateSteel"
+    },
+    "p": {
+      "item": "minecraft:piston"
+    },
+    "l": {
+      "item": "minecraft:lever"
+    },
+    "c": {
+      "item": "ic2:crafting",
+      "data": 15
+    }
+  },
+  "result": {
+    "item": "ic2guns:lower_receiver"
+  }
+}

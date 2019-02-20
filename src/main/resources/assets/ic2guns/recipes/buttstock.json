@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "aac",
+    " ac"
+  ],
+  "key": {
+    "a": {
+      "item": "ic2:crafting",
+      "data": 3
+    },
+    "c": {
+      "item": "ic2:crafting",
+      "data": 15
+    }
+  },
+  "result": {
+    "item": "ic2guns:buttstock"
+  }
+}

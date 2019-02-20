@@ -16,6 +16,8 @@ public class IC2GunsRecipes {
         IRecipeInputFactory input = Recipes.inputFactory;
         IC2GunsItemBasic cartridgeEmpty = IC2GunsItems.CARTRIDGE_EMPTY.instance;
         IC2GunsItemBasic cartridge = IC2GunsItems.CARTRIDGE.instance;
+        IC2GunsItemBasic barrel = IC2GunsItems.BARREL.instance;
+        IC2GunsItemBasic handguard = IC2GunsItems.HANDGUARD.instance;
 
         /* EMPTY CARTRIDGE */
         addExtrudingRecipe(input.forStack(IC2Items.getItem("casing", "copper")),
@@ -33,10 +35,17 @@ public class IC2GunsRecipes {
                 ItemMagazine.makeMagazine(1, 0));
 
         /* FILL MAGAZINE */
-        // Seems to be broken, produces magazine with 0 ammo
         addCanningRecipe(input.forStack(ItemMagazine.makeMagazine(1, 0)),
                 input.forStack(new ItemStack(cartridge, 20)),
                 ItemMagazine.makeMagazine(1, ItemMagazine.MAX_AMMO));
+
+        /* BARREL */
+        addExtrudingRecipe(input.forOreDict("plateSteel", 3),
+                new ItemStack(barrel));
+
+        /* HANDGUARD */
+        addExtrudingRecipe(input.forStack(IC2Items.getItem("crafting", "alloy"), 2),
+                new ItemStack(handguard));
 
     }
 

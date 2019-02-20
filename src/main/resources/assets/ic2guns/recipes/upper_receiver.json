@@ -1,0 +1,24 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "c",
+    "b",
+    "s"
+  ],
+  "key": {
+    "c": {
+      "item": "ic2:casing",
+      "data": 5
+    },
+    "b": {
+      "item": "ic2guns:barrel"
+    },
+    "s": {
+      "type": "forge:ore_dict",
+      "ore": "plateSteel"
+    }
+  },
+  "result": {
+    "item": "ic2guns:upper_receiver"
+  }
+}

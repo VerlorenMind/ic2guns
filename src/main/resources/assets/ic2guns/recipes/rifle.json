@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ulb",
+    "h  "
+  ],
+  "key": {
+    "u": {
+      "item": "ic2guns:upper_receiver"
+    },
+    "l": {
+      "item": "ic2guns:lower_receiver"
+    },
+    "b": {
+      "item": "ic2guns:buttstock"
+    },
+    "h": {
+      "item": "ic2guns:handguard"
+    }
+  },
+  "result": {
+    "item": "ic2guns:rifle"
+  }
+}
