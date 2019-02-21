@@ -14,9 +14,14 @@ public class ItemMagazine extends IC2GunsItemBasic {
     private static final String AMMO_KEY = "ammo";
     public static final int MAX_AMMO = 20;
 
+    public ItemMagazine () {
+        super("magazine");
+        setMaxStackSize(16);
+    }
+
     @Override
     public void addInformation (ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-        tooltip.add(Integer.toString(getAmmo(stack)));
+        tooltip.add(I18n.format("tooltip.ammo_label") + " " + getAmmo(stack));
         super.addInformation(stack, worldIn, tooltip, flagIn);
     }
 
@@ -35,11 +40,6 @@ public class ItemMagazine extends IC2GunsItemBasic {
     public String getItemStackDisplayName (ItemStack stack) {
         return getAmmo(stack) == 0 ? I18n.format("item.magazine.name.empty") :
                 super.getItemStackDisplayName(stack);
-    }
-
-    public ItemMagazine () {
-        super("magazine");
-        setMaxStackSize(16);
     }
 
     public static int getAmmo (ItemStack stack) {

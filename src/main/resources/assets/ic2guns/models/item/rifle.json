@@ -1,8 +1,9 @@
 {
   "parent": "item/handheld",
-  "textures": {
-    "layer0": "ic2guns:items/rifle"
-  },
+  "textures": {"layer0": "ic2guns:items/rifle"},
+  "overrides": [
+    {"predicate": {"ic2guns:empty": 1}, "model": "ic2guns:item/rifle_empty"}
+  ],
   "display": {
     "firstperson_righthand": {
       "rotation": [5, 276, 0],

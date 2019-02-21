@@ -17,3 +17,6 @@ item.handguard.name=Handguard
 item.lower_receiver.name=Lower Receiver
 item.upper_receiver.name=Upper Receiver
 item.rifle.name=Rifle
+
+# Tooltips
+tooltip.ammo_label=Ammo:

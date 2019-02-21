@@ -1,0 +1,6 @@
+{
+  "parent": "ic2guns:item/rifle",
+  "textures": {
+    "layer0": "ic2guns:items/rifle_empty"
+  }
+}
