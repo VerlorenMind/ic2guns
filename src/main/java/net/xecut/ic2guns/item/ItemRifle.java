@@ -8,6 +8,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import net.xecut.ic2guns.Reference;
 
 import javax.annotation.Nullable;
@@ -32,18 +34,21 @@ public class ItemRifle extends IC2GunsItemBasic {
     }
 
     @Override
+    @SideOnly(Side.CLIENT)
     public void addInformation (ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
         tooltip.add(I18n.format("tooltip.ammo_label") + " " + getAmmo(stack));
         super.addInformation(stack, worldIn, tooltip, flagIn);
     }
 
     @Override
+    @SideOnly(Side.CLIENT)
     public boolean showDurabilityBar (ItemStack stack) {
         int ammo = getAmmo(stack);
         return (ammo != 0) && (ammo != ItemMagazine.MAX_AMMO);
     }
 
     @Override
+    @SideOnly(Side.CLIENT)
     public double getDurabilityForDisplay (ItemStack stack) {
         return 1.0 - getAmmo(stack) / (double) ItemMagazine.MAX_AMMO;
     }
