@@ -20,3 +20,7 @@ item.rifle.name=Rifle
 
 # Tooltips
 tooltip.ammo_label=Ammo:
+
+# Keybinds
+key.category=IC2 Guns addon
+key.reload=Reload
